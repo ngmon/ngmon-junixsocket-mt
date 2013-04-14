@@ -101,7 +101,7 @@ public class AFUNIXServerSocket extends ServerSocket {
      * available for connected sockets. 
      */
     public void setPassUserCredentials(boolean passUserCredentials) throws SocketException {
-        implementation.setOption(AFUNIXSocketOptions.SO_PASSCRED, passUserCredentials);
+        implementation.setOption(AFUNIXSocketImpl.SO_PASSCRED, passUserCredentials);
     }
     
     /** {@inheritDoc} */

@@ -110,7 +110,7 @@ public class AFUNIXSocket extends Socket {
      * @return the {@link UserCredentials} of the peer, if available.
      */
     public UserCredentials getUserCredentials() throws SocketException {
-        return (UserCredentials) impl.getOption(AFUNIXSocketOptions.SO_PEERCRED);
+        return (UserCredentials) impl.getOption(AFUNIXSocketImpl.SO_PEERCRED);
     }
 
     @Override

@@ -33,9 +33,11 @@ import java.net.SocketOptions;
  * @author Christian Kohlschütter
  */
 class AFUNIXSocketImpl extends SocketImpl {
-    private static final int SHUT_RD = 0;
-    private static final int SHUT_WR = 1;
-    private static final int SHUT_RD_WR = 2;
+	public static final int SHUT_RD = 0;
+    public static final int SHUT_WR = 1;
+    public static final int SHUT_RD_WR = 2;
+    public static final int SO_PASSCRED = 0x2000;
+    public static final int SO_PEERCRED = 0x2001;
 
     private String socketFile;
     private boolean closed = false;
@@ -330,11 +332,20 @@ class AFUNIXSocketImpl extends SocketImpl {
     public void setOption(int optID, Object value) throws SocketException {
         try {
             switch (optID) {
+            case SO_PASSCRED :
+                if (value instanceof Boolean) {
+                    final boolean b = (Boolean) value;
+                    if (b) {
+                    	NativeUnixSocket.setPassUserCredentials(fd,true);
+                    }
+                }
+                return;
             case SocketOptions.SO_LINGER:
 
                 if (value instanceof Boolean) {
                     final boolean b = (Boolean) value;
                     if (b) {
+                    	
                         throw new SocketException(
                                 "Only accepting Boolean.FALSE here");
                     }
@@ -355,6 +366,7 @@ class AFUNIXSocketImpl extends SocketImpl {
                 NativeUnixSocket.setSocketOptionInt(fd, optID,
                         expectBoolean(value));
                 return;
+            	
             }
         } catch (final AFUNIXSocketException e) {
             throw e;

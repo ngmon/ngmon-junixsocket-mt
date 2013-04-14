@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
+import java.util.Properties;
 
 import org.newsclub.net.unix.AFUNIXServerSocket;
 import org.newsclub.net.unix.AFUNIXSocket;
@@ -36,6 +37,16 @@ import org.newsclub.net.unix.UserCredentials;
  */
 public class SimpleTestServer {
     public static void main(String[] args) throws IOException {
+    	
+    	//System.out.println("-------------------Properties begin---------------");
+    	//for(Object property : System.getProperties().values()){
+    		//System.out.println(property);
+    	//}
+    	//System.out.println("------------- Properties end ---------" + System.getProperty("org.newsclub.net.unix.library.path"));
+    	System.setProperty("org.newsclub.net.unix.library.path", "/home/martin/bin/");
+    	//System.getProperties();
+    	
+    	
         final File socketFile = new File(new File(System
                 .getProperty("java.io.tmpdir")), "junixsocket-test.sock");
 

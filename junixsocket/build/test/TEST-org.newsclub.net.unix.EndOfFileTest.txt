@@ -1,10 +1,10 @@
 Testsuite: org.newsclub.net.unix.EndOfFileTest
-Tests run: 7, Failures: 0, Errors: 0, Time elapsed: 1.438 sec
+Tests run: 7, Failures: 0, Errors: 0, Time elapsed: 1.418 sec
 
-Testcase: bidirectionalSanity took 0.179 sec
+Testcase: serverWriteToSocketClosedByServer took 0.263 sec
+Testcase: bidirectionalSanity took 0.104 sec
 Testcase: serverReadEof took 0.203 sec
-Testcase: clientReadEof took 0.204 sec
-Testcase: serverWriteToSocketClosedByServer took 0.203 sec
-Testcase: serverWriteToSocketClosedByClient took 0.205 sec
-Testcase: clientWriteToSocketClosedByClient took 0.204 sec
+Testcase: clientReadEof took 0.202 sec
+Testcase: serverWriteToSocketClosedByClient took 0.204 sec
+Testcase: clientWriteToSocketClosedByClient took 0.202 sec
 Testcase: clientWriteToSocketClosedByServer took 0.203 sec

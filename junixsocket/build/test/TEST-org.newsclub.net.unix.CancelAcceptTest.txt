@@ -1,4 +1,4 @@
 Testsuite: org.newsclub.net.unix.CancelAcceptTest
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.075 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.082 sec
 
-Testcase: issue6test1 took 0.045 sec
+Testcase: issue6test1 took 0.055 sec

@@ -28,7 +28,7 @@ public class AvailableTest extends SocketTestBase {
 
         int available = in.available();
         if (available == 0 && expected != 0) {
-            // this may happen, and it's ok.
+            // this may happen, and it's ok. // if available return 0 doesnt it meal we have 0 bytes available to read wtf??
             final int r = in.read();
             assertEquals(
                     "Available returned 0, so we tried to read the first byte (which should be 65=='A')",

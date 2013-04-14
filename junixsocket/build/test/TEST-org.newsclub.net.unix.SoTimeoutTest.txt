@@ -1,8 +1,8 @@
 Testsuite: org.newsclub.net.unix.SoTimeoutTest
-Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.076 sec
+Tests run: 2, Failures: 0, Errors: 0, Time elapsed: 0.114 sec
 ------------- Standard Error -----------------
 NOTE: Socket#setSoTimeout(int) did not throw an AFUNIXSocketException. This is OK.
 ------------- ---------------- ---------------
 
-Testcase: issue14Pass took 0.043 sec
+Testcase: issue14Pass took 0.075 sec
 Testcase: issue14Fail took 0.002 sec

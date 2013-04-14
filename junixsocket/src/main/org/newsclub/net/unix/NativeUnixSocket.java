@@ -35,8 +35,8 @@ import java.util.logging.Logger;
  * @author Christian Kohlschütter
  */
 final class NativeUnixSocket {
-    // private static final String PROP_LIBRARY_DIR =
-    // "org.newsclub.net.unix.library.path";
+     //private static final String PROP_LIBRARY_DIR =
+     //"org.newsclub.net.unix.library.path";
 
     static void load() {
         if (!isLoaded()) {
